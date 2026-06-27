@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pipaliya prince's | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:400px;
+height:400px;
+background:#2563eb55;
+border-radius:50%;
+filter:blur(180px);
+top:-100px;
+left:-100px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:350px;
+height:350px;
+background:#9333ea55;
+border-radius:50%;
+filter:blur(180px);
+bottom:-100px;
+right:-100px;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#60a5fa;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#60a5fa;
+}
+
+section{
+padding:120px 10%;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:100vh;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero h2{
+font-size:32px;
+margin:15px 0;
+color:#60a5fa;
+}
+
+.hero p{
+opacity:.8;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+padding:15px 35px;
+background:#2563eb;
+border:none;
+border-radius:30px;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-right:15px;
+transition:.3s;
+text-decoration:none;
+display:inline-block;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#1d4ed8;
+}
+
+.hero img{
+width:320px;
+border-radius:50%;
+border:6px solid #2563eb;
+box-shadow:0 0 40px #2563eb;
+}
+
+.title{
+font-size:40px;
+text-align:center;
+margin-bottom:60px;
+color:#60a5fa;
+}
+
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #2563eb88;
+}
+
+.skill{
+margin-bottom:25px;
+}
+
+.skill span{
+display:block;
+margin-bottom:10px;
+}
+
+.bar{
+height:10px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#2563eb,#9333ea);
+width:0;
+transition:2s;
+}
+
+.timeline{
+border-left:3px solid #2563eb;
+padding-left:30px;
+}
+
+.timeline div{
+margin-bottom:35px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+background:#1e293b;
+border:none;
+color:white;
+border-radius:10px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#111827;
+margin-top:50px;
+}
+
+.top{
+position:fixed;
+right:25px;
+bottom:25px;
+width:50px;
+height:50px;
+background:#2563eb;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+cursor:pointer;
+display:none;
+}
+
+@media(max-width:900px){
+
+.hero{
+text-align:center;
+justify-content:center;
+}
+
+.hero img{
+margin-top:40px;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">PIPALIYA PRINCE</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h3>Hello 👋 I'm</h3>
+
+<h1>PRINCE</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+I am a BCA student specializing in Artificial Intelligence. I love
+building AI-powered applications, websites and solving real-world
+problems with technology.
+</p>
+
+<a href="resume.pdf" class="btn">Download Resume</a>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+<img src="me.jpg" alt="Profile">
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p>
+
+I am passionate about Artificial Intelligence,
+Machine Learning and Full Stack Development.
+
+Currently pursuing BCA with AI specialization.
+
+My goal is to become a Software Engineer and build
+innovative products that make people's lives easier.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="card">
+
+<div class="skill">
+<span>HTML</span>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<span>CSS</span>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<span>JavaScript</span>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<span>Python</span>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<span>AI / Machine Learning</span>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="card-container">
+
+<div class="card">
+
+<h3>AI Homework Error Finder</h3>
+
+<p>
+
+Finds mistakes in students' homework instead of
+directly giving answers.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Customer Churn Prediction</h3>
+
+<p>
+
+Artificial Neural Network model to predict whether
+customers will stay or leave.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Portfolio Website</h3>
+
+<p>
+
+Modern responsive portfolio with animations and
+glassmorphism.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="title">Education</h2>
+
+<div class="timeline">
+
+<div>
+
+<h3>BCA (AI Specialization)</h3>
+
+<p>Semester 5</p>
+
+</div>
+
+<div>
+
+<h3>Learning</h3>
+
+<p>AI • Web Development • Python • JavaScript</p>
+
+</div>
+
+<div>
+
+<h3>Future Goal</h3>
+
+<p>Software Engineer 🚀</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+
+<input placeholder="Your Name">
+
+<input placeholder="Your Email">
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button href="instagram.com/prince._.pipaliya._.16" class="btn">Send Message</button>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 HEXDC | Designed with ❤️
+
+</footer>
+
+<div class="top" id="top">↑</div>
+
+<script>
+
+const words=[
+"AI Developer",
+"Web Developer",
+"Python Programmer",
+"Future Software Engineer"
+];
+
+let i=0;
+let j=0;
+let current='';
+let isDeleting=false;
+
+function type(){
+
+current=words[i];
+
+if(isDeleting){
+
+document.getElementById("typing").innerHTML=current.substring(0,j--);
+
+if(j<0){
+
+isDeleting=false;
+i++;
+
+if(i==words.length)
+i=0;
+
+}
+
+}
+
+else{
+
+document.getElementById("typing").innerHTML=current.substring(0,j++);
+
+if(j==current.length+1){
+
+isDeleting=true;
+
+setTimeout(type,1200);
+
+return;
+
+}
+
+}
+
+setTimeout(type,isDeleting?50:120);
+
+}
+
+type();
+
+window.addEventListener("scroll",()=>{
+
+document.getElementById("top").style.display=
+window.scrollY>400?"flex":"none";
+
+});
+
+document.getElementById("top").onclick=()=>{
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+};
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity=1;
+
+entry.target.style.transform='translateY(0)';
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+
+sec.style.opacity=0;
+
+sec.style.transform="translateY(60px)";
+
+sec.style.transition="1s";
+
+observer.observe(sec);
+
+});
+
+</script>
+
+</body>
+</html>
